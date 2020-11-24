@@ -1,0 +1,4 @@
+/* 모든 사이트 폰트 고정 시키기 (통일)  */
+body {
+	font-mamily: 'Malgun Gothic' !important;
+}

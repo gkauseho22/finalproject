@@ -1,0 +1,37 @@
+.mollang_first {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	margin-bottom: 15px;
+}
+
+#command_write {
+	width: 90%;
+	margin-right: 10px;
+}
+
+
+.col_mollang1 {
+	width: 20vw;
+	text-align: center;
+}
+
+.col_mollang2 {
+	width: 60vw;
+	text-align: center;
+}
+
+.col_mollang3 {
+	width: 20vw;
+	text-align: center;
+}
+
+
+@media screen and (max-width:991px) {
+	.tr_mollang_command {
+		display: flex;
+		flex-direction: column;
+		text-align: left;
+	}
+}

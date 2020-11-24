@@ -1,0 +1,52 @@
+/* CSS 변수  */
+:root {
+	--text-color: #000;
+}
+
+/* a ��ũ �� �ٲٱ� */
+.a_m {
+	text-decoration: none;
+	color: var(--text-color);
+}
+
+/* a ��ũ�� Ư¡�� ���� ����, a��ũ�� ���콺 �÷��� �� */
+.a_m:hover {
+	text-decoration: none;
+	color: var(--text-color);
+}
+
+
+
+
+/* �޴� ���� (�⺻ ����)  */
+.mollang1_2,
+.mollang_board_2 {
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+	width: 100%;
+	flex-direction: column;
+}
+
+.mollang2_2,
+.mollang3_2 {
+	display: none;
+	flex-direction: column;
+	align-items: left;
+	width: 100%;
+	flex-direction: column;
+}
+
+/* javaScript �̺�Ʈ �߻�  */
+.mollang1_2.active,
+.mollang2.active,
+.mollang4.active,
+.mollang_board_2.active,
+.mollang3.active {
+	display: none;
+}
+
+.mollang2_2.active,
+.mollang3_2.active {
+	display: flex;
+}

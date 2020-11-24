@@ -1,0 +1,106 @@
+.mollang_btn {
+	margin: 0px 5px 0px 5px;
+}
+
+#mollang_container {
+	margin-top: 10px;
+	width: 100%;
+	/* 깨짐 주의 */
+	/* float: left; */
+}
+
+.notice {
+	width: 100%;
+	height: 50px;
+	overflow: hidden;
+	background: #fff;
+}
+
+.rolling {
+	position: relative;
+	width: 100%;
+	height: auto;
+}
+
+.rolling li {
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	list-style: none;
+}
+
+.red_m {
+	color: #f00;
+}
+
+.a_m,
+.a_m:hover {
+	text-decoration: none;
+	color: #000;
+}
+
+
+/* 페이지 전환 하기 */
+.page_mollang_main {
+	width: 100%;
+}
+
+.ul_page {
+	list-style: none;
+	float: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.ul_page .page_mollang {
+	float: left;
+}
+
+.ul_page .page_mollang a {
+	padding: 4px;
+	margin-right: 3px;
+	width: 15px;
+	color: #000;
+	font: bold 12px tahoma;
+	text-align: center;
+	text-decoration: none;
+}
+
+.ul_page li a:hover,
+.ul_page li a:focus {
+	color: #000;
+	border: 1px solid #dee2e6;
+	background-color: #dee2e6;
+}
+
+/* 토픽 게시판 글쓰기 정렬 */
+#topic_title{
+	flex-grow: 1;
+}
+#topic_menu {
+	width: 40%;
+}
+.topic_width {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+}
+.topic_input{
+	width: 90%;
+}
+
+.topic_lavel {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 0px;
+}
+
+/* 작아졌을 때 */
+@media screen and (max-width:991px) {
+	.topic_input{
+	width: 75%;
+}
+}
