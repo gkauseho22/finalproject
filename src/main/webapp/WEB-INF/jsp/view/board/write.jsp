@@ -58,33 +58,29 @@
 <body>
 	<div class="mollang_test">
 		<h2 style="margin-bottom: 30px">{게시판 이름}</h2>
-		<form method="post" action="/write">
+		<form method="post" action="/write" enctype="multipart/form-data">
 
 			<!-- 제목 쓰기 -->
 			<div class="input-group mb-3" id="mollang_title">
 				<input type="text" class="form-control"
 					aria-label="Sizing example input"
-					aria-describedby="inputGroup-sizing-default" placeholder="제목">
+					aria-describedby="inputGroup-sizing-default" placeholder="제목" name="list_title">
 				<!-- 버튼 -->
+				<input type="submit" class="btn btn-secondary mollang_btn" value="글등록">
 				<button type="button" class="btn btn-secondary mollang_btn">글
 					등록</button>
 				<button type="button" class="btn btn-secondary mollang_btn">취소</button>
 			</div>
 			<div class="input-group mb-3" id="mollang_title">
 				<!-- 버튼 -->
-				<button type="button" class="btn btn-secondary mollang_btn">파일
-					저장</button>
+				<input type="file" class="btn btn-secondary mollang_btn" value="파일업로드" name="add_file">
 
-				<!-- 길이 줄여야 하는데 안 줄어든다.. -->
-				<input type="text" class="form-control" id="mollaing_write"
-					aria-label="Sizing example input"
-					aria-describedby="inputGroup-sizing-default" placeholder="파일 이름">
 			</div>
 			<br>
 
 			<!-- 글작성 form -->
 			<div style="width: 100%; margin: auto;">
-				<textarea id="summernote" name="content"></textarea>
+				<textarea id="summernote" name="list_content"></textarea>
 			</div>
 		</form>
 	</div>

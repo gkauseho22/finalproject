@@ -111,21 +111,21 @@
 								<select class="custom-select my-1 mr-sm-2"
 									id="inlineFormCustomSelectPref">
 									<option selected>대분류</option>
-									<option value="1">One</option>
-									<option value="2">Two</option>
-									<option value="3">Three</option>
+									<option value="One">One</option>
+									<option value="Two">Two</option>
+									<option value="Three">Three</option>
 								</select> <select class="custom-select my-1 mr-sm-2"
 									id="inlineFormCustomSelectPref">
 									<option selected>중분류</option>
-									<option value="1">One</option>
-									<option value="2">Two</option>
-									<option value="3">Three</option>
+									<option value="One">One</option>
+									<option value="Two">Two</option>
+									<option value="Three">Three</option>
 								</select> <select class="custom-select my-1 mr-sm-2"
 									id="inlineFormCustomSelectPref" name="user_job">
 									<option selected>소분류</option>
-									<option value="1">One</option>
-									<option value="2">Two</option>
-									<option value="3">Three</option>
+									<option value="One">One</option>
+									<option value="Two">Two</option>
+									<option value="Three">Three</option>
 								</select>
 							</div>
 							<div class="form-group row">
@@ -134,21 +134,21 @@
 								<select class="custom-select my-1 mr-sm-2"
 									id="inlineFormCustomSelectPref">
 									<option selected>대분류</option>
-									<option value="1">One</option>
-									<option value="2">Two</option>
-									<option value="3">Three</option>
+									<option value="One">One</option>
+									<option value="Two">Two</option>
+									<option value="Three">Three</option>
 								</select> <select class="custom-select my-1 mr-sm-2"
 									id="inlineFormCustomSelectPref">
 									<option selected>중분류</option>
-									<option value="1">One</option>
-									<option value="2">Two</option>
-									<option value="3">Three</option>
+									<option value="One">One</option>
+									<option value="Two">Two</option>
+									<option value="Three">Three</option>
 								</select> <select class="custom-select my-1 mr-sm-2"
 									id="inlineFormCustomSelectPref" name="inter_job1">
 									<option selected>소분류</option>
-									<option value="1">One</option>
-									<option value="2">Two</option>
-									<option value="3">Three</option>
+									<option value="One">One</option>
+									<option value="Two">Two</option>
+									<option value="Three">Three</option>
 								</select>
 							</div>
 
@@ -157,21 +157,21 @@
 								<select class="custom-select my-1 mr-sm-2"
 									id="inlineFormCustomSelectPref">
 									<option selected>대분류</option>
-									<option value="1">One</option>
-									<option value="2">Two</option>
-									<option value="3">Three</option>
+									<option value="One">One</option>
+									<option value="Two">Two</option>
+									<option value="Three">Three</option>
 								</select> <select class="custom-select my-1 mr-sm-2"
 									id="inlineFormCustomSelectPref">
 									<option selected>중분류</option>
-									<option value="1">One</option>
-									<option value="2">Two</option>
-									<option value="3">Three</option>
+									<option value="One">One</option>
+									<option value="Two">Two</option>
+									<option value="Three">Three</option>
 								</select> <select class="custom-select my-1 mr-sm-2"
 									id="inlineFormCustomSelectPref" name="inter_job2">
 									<option selected>소분류</option>
-									<option value="1">One</option>
-									<option value="2">Two</option>
-									<option value="3">Three</option>
+									<option value="One">One</option>
+									<option value="Two">Two</option>
+									<option value="Three">Three</option>
 								</select>
 							</div>
 
@@ -181,21 +181,21 @@
 								<select class="custom-select my-1 mr-sm-2"
 									id="inlineFormCustomSelectPref">
 									<option selected>대분류</option>
-									<option value="1">One</option>
-									<option value="2">Two</option>
-									<option value="3">Three</option>
+									<option value="One">One</option>
+									<option value="Two">Two</option>
+									<option value="Three">Three</option>
 								</select> <select class="custom-select my-1 mr-sm-2"
 									id="inlineFormCustomSelectPref">
 									<option selected>중분류</option>
-									<option value="1">One</option>
-									<option value="2">Two</option>
-									<option value="3">Three</option>
+									<option value="One">One</option>
+									<option value="Two">Two</option>
+									<option value="Three">Three</option>
 								</select> <select class="custom-select my-1 mr-sm-2"
 									id="inlineFormCustomSelectPref" name="inter_job3">
 									<option selected>소분류</option>
-									<option value="1">One</option>
-									<option value="2">Two</option>
-									<option value="3">Three</option>
+									<option value="One">One</option>
+									<option value="Two">Two</option>
+									<option value="Three">Three</option>
 								</select>
 							</div>
 
@@ -206,9 +206,9 @@
 								<select class="custom-select mr-sm-2"
 									id="inlineFormCustomSelectPrefMBTI" name="mbti_mbti">
 									<option selected>List</option>
-									<option value="1">One</option>
-									<option value="2">Two</option>
-									<option value="3">Three</option>
+									<option value="One">One</option>
+									<option value="Two">Two</option>
+									<option value="Three">Three</option>
 								</select>
 								<button type="button" class="btn btn-secondary" id="BUTTONMO">MBTI
 									하러가기</button>
