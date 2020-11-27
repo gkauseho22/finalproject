@@ -73,8 +73,7 @@
 			</div>
 			<div class="input-group mb-3" id="mollang_title">
 				<!-- 버튼 -->
-				<input type="file" class="btn btn-secondary mollang_btn" value="파일업로드" name="add_file">
-
+				<input type="file" class="btn btn-secondary mollang_btn" name="add_file" value="파일저장">
 			</div>
 			<br>
 

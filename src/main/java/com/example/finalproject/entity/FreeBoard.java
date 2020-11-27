@@ -24,10 +24,10 @@ public class FreeBoard {
     private Timestamp create_time;
     private int views;
     private int declaration;
-    private String add_file;
+    private Long add_file;
 
     @Builder
-    public FreeBoard(Long list_code, int board_code, String list_title, String list_content, int user_code, Timestamp create_time, int views, int declaration, String add_file) {
+    public FreeBoard(Long list_code, int board_code, String list_title, String list_content, int user_code, Timestamp create_time, int views, int declaration, Long add_file) {
         this.list_code = list_code;
         this.board_code = board_code;
         this.list_title = list_title;
