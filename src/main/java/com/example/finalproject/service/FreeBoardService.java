@@ -40,26 +40,45 @@ public class FreeBoardService {
         return freeBoardRepository.save(freeBoardDTO.toEntity()).getList_code();
     }
 
+//    public List<FreeBoardDTO> getBoard(){
+////        Gson gson = new Gson();
+//        List<FreeBoard> freeBoardList = freeBoardRepository.findAll();
+//        List<FreeBoardDTO> freeBoardDTOList = freeBoardList.stream().map(freeBoard -> {
+//            FreeBoardDTO freeBoardDTO = new FreeBoardDTO();
+//            freeBoardDTO.setList_title(freeBoard.getList_title());
+//            freeBoardDTO.setAdd_file(freeBoard.getAdd_file());
+//            freeBoardDTO.setList_content(freeBoard.getList_content());
+//            return freeBoardDTO;
+//        }).collect(Collectors.toList());
+//
+////        String freeBoardDTOList = gson.toJson(freeBoardList);
+////        for(FreeBoard freeBoard : freeBoardList){
+////            FreeBoardDTO freeBoardDTO = FreeBoardDTO.builder()
+////                    .list_title(freeBoard.getList_title())
+////                    .add_file(freeBoard.getAdd_file())
+////                    .list_content(freeBoard.getList_content())
+////                    .build();
+////            freeBoardDTOList.add(freeBoardDTO);
+////        }
+//        return freeBoardDTOList;
+//    }
     public List<FreeBoardDTO> getBoard(){
-//        Gson gson = new Gson();
         List<FreeBoard> freeBoardList = freeBoardRepository.findAll();
-        List<FreeBoardDTO> freeBoardDTOList = freeBoardList.stream().map(freeBoard -> {
-            FreeBoardDTO freeBoardDTO = new FreeBoardDTO();
-            freeBoardDTO.setList_title(freeBoard.getList_title());
-            freeBoardDTO.setAdd_file(freeBoard.getAdd_file());
-            freeBoardDTO.setList_content(freeBoard.getList_content());
-            return freeBoardDTO;
-        }).collect(Collectors.toList());
+        List<FreeBoardDTO> freeBoardDTOList = new ArrayList<>();
 
-//        String freeBoardDTOList = gson.toJson(freeBoardList);
-//        for(FreeBoard freeBoard : freeBoardList){
-//            FreeBoardDTO freeBoardDTO = FreeBoardDTO.builder()
-//                    .list_title(freeBoard.getList_title())
-//                    .add_file(freeBoard.getAdd_file())
-//                    .list_content(freeBoard.getList_content())
-//                    .build();
-//            freeBoardDTOList.add(freeBoardDTO);
-//        }
+        for(FreeBoard board : freeBoardList){
+            FreeBoardDTO freeBoardDTO = FreeBoardDTO.builder()
+                    .board_code(board.getBoard_code())
+                    .list_title(board.getList_title())
+                    .list_content(board.getList_content())
+                    .declaration(board.getDeclaration())
+                    .views(board.getViews())
+                    .add_file(board.getAdd_file())
+                    .create_time(board.getCreate_time())
+                    .user_code(board.getUser_code())
+                    .build();
+            freeBoardDTOList.add(freeBoardDTO);
+        }
         return freeBoardDTOList;
     }
 }

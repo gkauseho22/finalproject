@@ -3,6 +3,7 @@ package com.example.finalproject.controller;
 import com.example.finalproject.dto.FileDTO;
 import com.example.finalproject.dto.FreeBoardDTO;
 import com.example.finalproject.dto.UserListDTO;
+import com.example.finalproject.entity.FreeBoard;
 import com.example.finalproject.service.FileService;
 import com.example.finalproject.service.FreeBoardService;
 import com.example.finalproject.service.UserListService;
@@ -34,7 +35,11 @@ public class MainController {
     private FileService fileService;
 
     @GetMapping("/")
-    public String main(){
+    public String main(Model model){
+
+        List<FreeBoardDTO> freeBoardDTOList = freeBoardService.getBoard();
+        model.addAttribute("boardList", freeBoardDTOList);
+
         return "/view/template/template";
     }
 
@@ -59,46 +64,46 @@ public class MainController {
         return "/view/board/write";
     }
 
+//    @PostMapping("/write")
+//    public String boardMain(@RequestBody FreeBoardDTO freeBoardDTO, MultipartFile files){
+//        try{
+//            String origFilename = files.getOriginalFilename();
+//            String filename = new MD5Generator(origFilename).toString();
+//            String savePath = System.getProperty("C:\\Users\\Administrator\\IdeaProjects\\finalproject\\src\\main\\resources\\static") + "\\upload";
+//            if(!new File(savePath).exists()){
+//                try{
+//                    new File(savePath).mkdir();
+//                }catch (Exception e){
+//                    e.getStackTrace();
+//                }
+//            }
+//            String filePath = savePath + "\\" + filename;
+//            files.transferTo(new File(filePath));
+//
+//            FileDTO fileDTO = new FileDTO();
+//            fileDTO.setOrigFilename(origFilename);
+//            fileDTO.setFilename(filename);
+//            fileDTO.setFilePath(filePath);
+//
+//            Long fileId = fileService.save(fileDTO);
+//            freeBoardDTO.setAdd_file(fileId);
+//            freeBoardService.save(freeBoardDTO);
+//        } catch (Exception e){
+//            e.printStackTrace();
+//        }
+//
+//
+//        freeBoardService.save (freeBoardDTO);
+//        return "redirect:/";
+//    }
+
     @PostMapping("/write")
-    public String boardMain(@RequestBody FreeBoardDTO freeBoardDTO, MultipartFile files){
-        try{
-            String origFilename = files.getOriginalFilename();
-            String filename = new MD5Generator(origFilename).toString();
-            String savePath = System.getProperty("C:\\Users\\Administrator\\IdeaProjects\\finalproject\\src\\main\\resources\\static") + "\\upload";
-            if(!new File(savePath).exists()){
-                try{
-                    new File(savePath).mkdir();
-                }catch (Exception e){
-                    e.getStackTrace();
-                }
-            }
-            String filePath = savePath + "\\" + filename;
-            files.transferTo(new File(filePath));
+    public String boardMain(FreeBoardDTO freeBoardDTO) {
 
-            FileDTO fileDTO = new FileDTO();
-            fileDTO.setOrigFilename(origFilename);
-            fileDTO.setFilename(filename);
-            fileDTO.setFilePath(filePath);
+        freeBoardService.save(freeBoardDTO);
 
-            Long fileId = fileService.save(fileDTO);
-            freeBoardDTO.setAdd_file(fileId);
-            freeBoardService.save(freeBoardDTO);
-        } catch (Exception e){
-            e.printStackTrace();
-        }
-
-
-        freeBoardService.save (freeBoardDTO);
         return "redirect:/";
     }
-
-//    @PostMapping("/write")
-//    public @ResponseBody String boardMain(@Valid @RequestBody FreeBoardDTO freeBoardDTO) {
-//
-//        freeBoardService.save(freeBoardDTO);
-//
-//        return "/";
-//    }
 
 
 }
