@@ -60,7 +60,7 @@ public class MainController {
     }
 
     @PostMapping("/write")
-    public String boardMain(@RequestBody FreeBoardDTO freeBoardDTO, MultipartFile files){
+    public String boardMain(@RequestParam("add_file") @Valid FreeBoardDTO freeBoardDTO, MultipartFile files){
         try{
             String origFilename = files.getOriginalFilename();
             String filename = new MD5Generator(origFilename).toString();

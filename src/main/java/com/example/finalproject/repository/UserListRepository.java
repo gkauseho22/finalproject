@@ -3,7 +3,9 @@ package com.example.finalproject.repository;
 import com.example.finalproject.entity.UserList;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface UserListRepository extends JpaRepository<UserList, Long> {
+import java.util.Optional;
 
+public interface UserListRepository extends JpaRepository<UserList, Long> {
+    Optional<UserList> findByUser_Id(String userId);
 
 }
