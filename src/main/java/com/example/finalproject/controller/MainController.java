@@ -49,6 +49,11 @@ public class MainController {
         return "redirect:/";
     }
 
+    @GetMapping("/login")
+    public String login(){
+        return "/view/member/member_login";
+    }
+
     @GetMapping("/just")
     public String test_Just() {
         return "/view/board/result";
