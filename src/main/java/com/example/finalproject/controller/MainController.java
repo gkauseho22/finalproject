@@ -1,10 +1,10 @@
 package com.example.finalproject.controller;
 
-import com.example.finalproject.dto.FileDTO;
+//import com.example.finalproject.dto.FileDTO;
 import com.example.finalproject.dto.FreeBoardDTO;
 import com.example.finalproject.dto.UserListDTO;
 import com.example.finalproject.entity.FreeBoard;
-import com.example.finalproject.service.FileService;
+//import com.example.finalproject.service.FileService;
 import com.example.finalproject.service.FreeBoardService;
 import com.example.finalproject.service.UserListService;
 import com.example.finalproject.util.MD5Generator;
@@ -31,8 +31,8 @@ public class MainController {
     @Autowired
     private FreeBoardService freeBoardService;
 
-    @Autowired
-    private FileService fileService;
+//    @Autowired
+//    private FileService fileService;
 
     @GetMapping("/")
     public String main(Model model){
@@ -98,7 +98,7 @@ public class MainController {
 //    }
 
     @PostMapping("/write")
-    public String boardMain(FreeBoardDTO freeBoardDTO) {
+    public String boardMain(@Valid FreeBoardDTO freeBoardDTO) {
 
         freeBoardService.save(freeBoardDTO);
 

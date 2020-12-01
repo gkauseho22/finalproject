@@ -8,9 +8,9 @@ import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.transaction.Transactional;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -26,6 +26,7 @@ public class FreeBoardService {
 //    @Autowired
 //    private MultipartFile multipartFile;
 
+    @Transactional
     public Long save(FreeBoardDTO freeBoardDTO){
 
 //        try{
@@ -62,6 +63,7 @@ public class FreeBoardService {
 ////        }
 //        return freeBoardDTOList;
 //    }
+    @Transactional
     public List<FreeBoardDTO> getBoard(){
         List<FreeBoard> freeBoardList = freeBoardRepository.findAll();
         List<FreeBoardDTO> freeBoardDTOList = new ArrayList<>();

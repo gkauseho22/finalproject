@@ -58,7 +58,7 @@
 <body>
 	<div class="mollang_test">
 		<h2 style="margin-bottom: 30px">{게시판 이름}</h2>
-		<form method="post" action="/write" enctype="multipart/form-data">
+		<form method="post" action="/write">
 
 			<!-- 제목 쓰기 -->
 			<div class="input-group mb-3" id="mollang_title">
@@ -73,7 +73,7 @@
 			</div>
 			<div class="input-group mb-3" id="mollang_title">
 				<!-- 버튼 -->
-				<input type="file" class="btn btn-secondary mollang_btn" name="add_file" value="파일저장">
+				<input type="text" class="btn btn-secondary mollang_btn" name="add_file">
 			</div>
 			<br>
 

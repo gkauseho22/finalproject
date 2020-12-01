@@ -27,8 +27,12 @@ public class RController {
 //        return entity;
 //    }
 
-    @RequestMapping("/jsonresult")
-    public ResponseEntity result(){
-        return ResponseEntity.ok(freeBoardService.getBoard());
-    }
+//    @RequestMapping("/jsonresult")
+//    public ResponseEntity result(){
+//
+//        return ResponseEntity.ok(freeBoardService.getBoard());
+//    }
+
+//    @GetMapping("/command")
+//    public
 }

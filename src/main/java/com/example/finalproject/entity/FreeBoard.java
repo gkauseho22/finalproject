@@ -17,25 +17,31 @@ public class FreeBoard {
     @Id @GeneratedValue
     private Long list_code;
 
+    @Column(columnDefinition = "int default 1")
     private int board_code;
+
     private String list_title;
+
+    @Column(length = 4000)
     private String list_content;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_code")
     private UserList user_code;
 
-    @Column(columnDefinition = "date default sysdate")
-    private Date create_time;
+    @CreationTimestamp
+    private Timestamp create_time;
 
     @Column(columnDefinition = "int default 0")
     private int views;
 
     @Column(columnDefinition = "int default 0")
     private int declaration;
+
     private Long add_file;
 
     @Builder
-    public FreeBoard(Long list_code, int board_code, String list_title, String list_content, UserList user_code, Date create_time, int views, int declaration, Long add_file) {
+    public FreeBoard(Long list_code, int board_code, String list_title, String list_content, UserList user_code, Timestamp create_time, int views, int declaration, Long add_file) {
         this.list_code = list_code;
         this.board_code = board_code;
         this.list_title = list_title;

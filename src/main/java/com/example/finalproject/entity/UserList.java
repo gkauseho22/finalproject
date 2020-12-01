@@ -3,8 +3,8 @@ package com.example.finalproject.entity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
+//import org.springframework.security.core.GrantedAuthority;
+//import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -17,7 +17,7 @@ import java.util.Set;
 @NoArgsConstructor
 @Entity
 @Getter
-public class UserList implements UserDetails {
+public class UserList{
 
     @Id @GeneratedValue
     private Long user_code;
@@ -45,7 +45,8 @@ public class UserList implements UserDetails {
     private int block_count;
 
     @Builder
-    public UserList(String user_id, String user_pw, String user_name, String mbti_mbti, String user_job, String inter_job1, String inter_job2, String inter_job3) {
+    public UserList(Long user_code, String user_id, String user_pw, String user_name, String mbti_mbti, String user_job, String inter_job1, String inter_job2, String inter_job3) {
+        this.user_code = user_code;
         this.user_id = user_id;
         this.user_pw = user_pw;
         this.user_name = user_name;
@@ -56,42 +57,42 @@ public class UserList implements UserDetails {
         this.inter_job3 = inter_job3;
     }
 
-    // 사용자의 권한을 컬렉션 형태로 반환
-    // 단, 클래스 자료형은 GrantedAuthority를 구현해야함
-    @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        Set<GrantedAuthority> roles = new HashSet<>();
-        for (String role : auth.split(","))
-        return null;
-    }
-
-    @Override
-    public String getPassword() {
-        return null;
-    }
-
-    @Override
-    public String getUsername() {
-        return null;
-    }
-
-    @Override
-    public boolean isAccountNonExpired() {
-        return false;
-    }
-
-    @Override
-    public boolean isAccountNonLocked() {
-        return false;
-    }
-
-    @Override
-    public boolean isCredentialsNonExpired() {
-        return false;
-    }
-
-    @Override
-    public boolean isEnabled() {
-        return false;
-    }
+//    // 사용자의 권한을 컬렉션 형태로 반환
+//    // 단, 클래스 자료형은 GrantedAuthority를 구현해야함
+//    @Override
+//    public Collection<? extends GrantedAuthority> getAuthorities() {
+//        Set<GrantedAuthority> roles = new HashSet<>();
+//        for (String role : auth.split(","))
+//        return null;
+//    }
+//
+//    @Override
+//    public String getPassword() {
+//        return null;
+//    }
+//
+//    @Override
+//    public String getUsername() {
+//        return null;
+//    }
+//
+//    @Override
+//    public boolean isAccountNonExpired() {
+//        return false;
+//    }
+//
+//    @Override
+//    public boolean isAccountNonLocked() {
+//        return false;
+//    }
+//
+//    @Override
+//    public boolean isCredentialsNonExpired() {
+//        return false;
+//    }
+//
+//    @Override
+//    public boolean isEnabled() {
+//        return false;
+//    }
 }

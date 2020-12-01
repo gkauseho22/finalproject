@@ -11,6 +11,7 @@ import lombok.Setter;
 @NoArgsConstructor
 public class UserListDTO {
 
+    private Long user_code;
     private String user_id;
     private String user_pw;
     private String user_name;
@@ -21,7 +22,8 @@ public class UserListDTO {
     private String inter_job3;
 
     @Builder
-    public UserListDTO(String user_id, String user_pw, String user_name, String mbti_mbti, String user_job, String inter_job1, String inter_job2, String inter_job3) {
+    public UserListDTO(Long user_code, String user_id, String user_pw, String user_name, String mbti_mbti, String user_job, String inter_job1, String inter_job2, String inter_job3) {
+        this.user_code = user_code;
         this.user_id = user_id;
         this.user_pw = user_pw;
         this.user_name = user_name;
@@ -34,6 +36,7 @@ public class UserListDTO {
 
     public UserList toEntity(){
         return UserList.builder()
+                .user_code(user_code)
                 .user_id(user_id)
                 .user_pw(user_pw)
                 .user_name(user_name)
