@@ -17,7 +17,9 @@
 	integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
 	crossorigin="anonymous"></script>
 <!-- 기본 css 연결하기 -->
-<link rel="stylesheet" href="../../css/board/command.css">
+<link rel="stylesheet" href="../css/board/command.css">
+<link rel="stylesheet" href="../css/board/page.css">
+
 </head>
 <body>
 	<div>

@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -21,11 +22,12 @@
 <script src="https://kit.fontawesome.com/45fba14eff.js"
 	crossorigin="anonymous"></script>
 
-<link rel="stylesheet" href="../../css/main.css">
+<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="../css/board/page.css">
 
 <!-- j Query -->
-<script type="text/JavaScript" src="../../lib/jquery-3.5.1.js"></script>
-<script type="text/JavaScript" src="../../lib/jquery-3.5.1.min.js"></script>
+<script type="text/JavaScript" src="../lib/jquery-3.5.1.js"></script>
+<script type="text/JavaScript" src="../lib/jquery-3.5.1.min.js"></script>
 <script>
 	$(document).ready(function() {
 		//공지사항의 높이값
@@ -88,7 +90,7 @@
 
 			<!-- 버튼 -->
 			<button type="button" class="btn btn-secondary mollang_btn">검색</button>
-			<button type="button" class="btn btn-secondary mollang_btn">글쓰기</button>
+			<button type="button" class="btn btn-secondary mollang_btn" location.href="/board">글쓰기</button>
 		</div>
 
 		<!--  한줄 공지 글 -->
@@ -117,13 +119,14 @@
 						</tr>
 					</thead>
 					<tbody>
+					<c:forEach var="boardList" items="${boardList}">
 						<tr>
-							<td class="text-center d-none d-md-table-cell">10</td>
-							<td><a href='board_read.html'>글 제목 입니다</a></td>
+							<td class="text-center d-none d-md-table-cell">${boardList.list_code}</td>
+							<td><a href='/detail?'>${boardList.list_title}</a></td>
 							<td class="text-center d-none d-md-table-cell">홍길동</td>
-							<td class="text-center d-none d-md-table-cell">2018-12-12</td>
-
+							<td class="text-center d-none d-md-table-cell">${boardList.create_time}</td>
 						</tr>
+					</c:forEach>
 						<tr>
 							<td class="text-center d-none d-md-table-cell">10</td>
 							<td><a href='board_read.html'>글 제목 입니다</a></td>
@@ -193,18 +196,11 @@
 			</div>
 		</div>
 		<div class="page_mollang_main">
+			<c:forEach var="pageNum" items="pageList">
 			<ul class="ul_page">
-				<li class="page_mollang"><a href="#">1</a></li>
-				<li class="page_mollang"><a href="#">2</a></li>
-				<li class="page_mollang"><a href="#">3</a></li>
-				<li class="page_mollang"><a href="#">4</a></li>
-				<li class="page_mollang"><a href="#">5</a></li>
-				<li class="page_mollang"><a href="#">6</a></li>
-				<li class="page_mollang"><a href="#">7</a></li>
-				<li class="page_mollang"><a href="#">8</a></li>
-				<li class="page_mollang"><a href="#">9</a></li>
-				<li class="page_mollang"><a href="#">10</a></li>
+				<li class="page_mollang"><a href="/Free_Board?page=${pageNum}">${pageNum}</a></li>
 			</ul>
+			</c:forEach>
 		</div>
 	</div>
 </body>

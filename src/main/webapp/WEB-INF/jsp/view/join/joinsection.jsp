@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>join section</title>
 
-<link rel="stylesheet" href="../../css/section.css">
+<link rel="stylesheet" href="../css/section.css">
 
 <%
 	String pp = null;

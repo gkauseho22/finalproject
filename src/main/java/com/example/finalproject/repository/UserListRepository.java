@@ -1,11 +1,11 @@
-package com.example.finalproject.repository;
+package com.example.finalproject.repository;/*
+package com.example.fproject.Repository;
 
-import com.example.finalproject.entity.UserList;
+import com.example.fproject.Entity.UserList;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.util.Optional;
-
 public interface UserListRepository extends JpaRepository<UserList, Long> {
-//    Optional<UserList> findByUser_Id(String userId);
+
 
 }
+*/

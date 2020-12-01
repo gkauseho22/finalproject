@@ -13,7 +13,7 @@
 	<script src="https://kit.fontawesome.com/45fba14eff.js"
 	crossorigin="anonymous"></script>
 
-<link rel="stylesheet" href="../../css/template.css">
+<link rel="stylesheet" href="../css/template.css">
 </head>
 <body style="margin-left: 5%; padding-right: 8%">
 

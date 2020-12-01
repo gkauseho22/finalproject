@@ -19,7 +19,7 @@
 
 
 <!-- 기본 css 연결하기 -->
-<link rel="stylesheet" href="../../css/board/board_view.css">
+<link rel="stylesheet" href="../css/board/board_view.css">
 
 <title>{게시판 이름}</title>
 
@@ -30,7 +30,7 @@
 
 		<!-- 제목 쓰기 -->
 		<div id="mollang_center">
-			<h5 class="card-title mollang_title">Dark card title</h5>
+			<h4 class="card-title mollang_title">Dark card title</h4>
 
 			<!-- 버튼 -->
 			<!-- 작성자만 보이기 -->

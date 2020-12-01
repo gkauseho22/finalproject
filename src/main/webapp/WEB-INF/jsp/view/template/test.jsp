@@ -7,10 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<div style="border-bottom: 3px solid lightgray;">
-
-		<top style="width:100%"> <jsp:include page="top.jsp" /> </top>
-	</div>
-	<jsp:include page="section.jsp" />
+<jsp:include page='${pp}'/>
+123
 </body>
 </html>

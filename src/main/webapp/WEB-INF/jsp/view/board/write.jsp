@@ -23,7 +23,7 @@
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote-bs4.js"></script>
 <!-- include summernote-ko-KR -->
-<script src="../../summer/summernote-ko-KR.js"></script>
+<script src="../summer/summernote-ko-KR.js"></script>
 
 
 <!-- 부트스트렙 -->
@@ -39,7 +39,7 @@
 
 
 <!-- 기본 css 연결하기 -->
-<link rel="stylesheet" href="../../css/board/board_write.css">
+<link rel="stylesheet" href="../css/board/board_write.css">
 
 <title>{게시판 이름}</title>
 
@@ -66,14 +66,19 @@
 					aria-label="Sizing example input"
 					aria-describedby="inputGroup-sizing-default" placeholder="제목" name="list_title">
 				<!-- 버튼 -->
-				<input type="submit" class="btn btn-secondary mollang_btn" value="글등록">
-				<button type="button" class="btn btn-secondary mollang_btn">글
+				<button type="submit" class="btn btn-secondary mollang_btn">글
 					등록</button>
 				<button type="button" class="btn btn-secondary mollang_btn">취소</button>
 			</div>
 			<div class="input-group mb-3" id="mollang_title">
 				<!-- 버튼 -->
-				<input type="text" class="btn btn-secondary mollang_btn" name="add_file">
+				<button type="button" class="btn btn-secondary mollang_btn">파일
+					저장</button>
+
+				<!-- 길이 줄여야 하는데 안 줄어든다.. -->
+				<input type="text" class="form-control" id="mollaing_write"
+					aria-label="Sizing example input"
+					aria-describedby="inputGroup-sizing-default" placeholder="파일 이름" name="add_file">
 			</div>
 			<br>
 

@@ -22,8 +22,8 @@
 	href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap"
 	rel="stylesheet">
 
-<link rel="stylesheet" href="../../css/aside.css">
-<script src="../../js/aside.js" defer>
+<link rel="stylesheet" href="../css/aside.css">
+<script src="../js/aside.js" defer>
 	
 </script>
 <style>

@@ -21,11 +21,12 @@
 <script src="https://kit.fontawesome.com/45fba14eff.js"
 	crossorigin="anonymous"></script>
 
-<link rel="stylesheet" href="../../css/board/topic_lavel.css">
+<link rel="stylesheet" href="../css/board/topic_lavel.css">
+<link rel="stylesheet" href="../css/board/page.css">
 
 <!-- j Query -->
-<script type="text/JavaScript" src="../../lib/jquery-3.5.1.js"></script>
-<script type="text/JavaScript" src="../../lib/jquery-3.5.1.min.js"></script>
+<script type="text/JavaScript" src="../lib/jquery-3.5.1.js"></script>
+<script type="text/JavaScript" src="../lib/jquery-3.5.1.min.js"></script>
 <script>
 	$(document).ready(function() {
 		//공지사항의 높이값

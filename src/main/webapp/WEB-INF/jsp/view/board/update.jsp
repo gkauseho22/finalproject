@@ -23,7 +23,7 @@
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote-bs4.js"></script>
 <!-- include summernote-ko-KR -->
-<script src="../../summer/summernote-ko-KR.js"></script>
+<script src="../summer/summernote-ko-KR.js"></script>
 
 
 <!-- 부트스트렙 -->
@@ -39,7 +39,7 @@
 
 
 <!-- 기본 css 연결하기 -->
-<link rel="stylesheet" href="../../css/board/board_write.css">
+<link rel="stylesheet" href="../css/board/board_write.css">
 
 <title>{게시판 이름}</title>
 

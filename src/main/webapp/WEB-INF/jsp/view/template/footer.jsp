@@ -21,7 +21,7 @@
 
 <!--FOOTER -->
 	<div class="container-fluid bg-silver text-black"
-		style="background-color: #EFEAEA; margin-top: 50px; padding-top: 30px; padding-bottom: 30px; margin-left: 10px; margin-right: 10px;">
+		style="background-color: #efeaea; margin-top: 50px; padding-top: 30px; padding-bottom: 30px; margin-left: 10px; margin-right: 10px;">
 		<div class="container">
 			<p>에스엘</p>
 			<p>오늘은 푸터  예제</p>

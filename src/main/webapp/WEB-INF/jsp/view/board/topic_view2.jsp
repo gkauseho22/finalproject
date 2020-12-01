@@ -19,7 +19,7 @@
 
 
 <!-- 기본 css 연결하기 -->
-<link rel="stylesheet" href="../../css/board/topic_view.css">
+<link rel="stylesheet" href="../css/board/topic_view.css">
 
 <title>{게시판 이름}</title>
 
@@ -30,7 +30,7 @@
 
 		<!-- 제목 쓰기 -->
 		<div id="mollang_center">
-			<h5 class="card-title mollang_title">Dark card title</h5>
+			<h4 class="card-title mollang_title">Dark card title</h4>
 
 			<!-- 버튼 -->
 			<!-- 작성자만 보이기 -->
@@ -48,14 +48,14 @@
 		<div class="topic_mollang">
 			<div class="check01_mollang">
 				<div class="card-header mollang_center" id="border_dark_mollang">게시글
-					내용</div>
+					내용12312312312</div>
 			</div>
-			<div class="topic_center_mollang">
+			<div class="topic_center_mollang" style="height:300px">
 				<font style="font-style: bold">&nbsp;&nbsp;vs&nbsp;&nbsp;</font>
 			</div>
 			<div class="check01_mollang">
 				<div class="card-header mollang_center" id="border_dark_mollang">게시글
-					내용</div>
+					내용312312312</div>
 			</div>
 		</div>
 

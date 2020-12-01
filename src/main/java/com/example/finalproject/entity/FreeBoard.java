@@ -26,11 +26,11 @@ public class FreeBoard {
     private String list_content;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_code")
-    private UserList user_code;
+    @JoinColumn(name = "user_code", insertable = false, updatable = false)
+    private User_listEntity user_code;
 
     @CreationTimestamp
-    private Timestamp create_time;
+    private Timestamp createtime;
 
     @Column(columnDefinition = "int default 0")
     private int views;
@@ -41,13 +41,13 @@ public class FreeBoard {
     private Long add_file;
 
     @Builder
-    public FreeBoard(Long list_code, int board_code, String list_title, String list_content, UserList user_code, Timestamp create_time, int views, int declaration, Long add_file) {
+    public FreeBoard(Long list_code, int board_code, String list_title, String list_content, User_listEntity user_code, Timestamp createtime, int views, int declaration, Long add_file) {
         this.list_code = list_code;
         this.board_code = board_code;
         this.list_title = list_title;
         this.list_content = list_content;
         this.user_code = user_code;
-        this.create_time = create_time;
+        this.createtime = createtime;
         this.views = views;
         this.declaration = declaration;
         this.add_file = add_file;

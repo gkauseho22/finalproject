@@ -16,7 +16,7 @@
 	crossorigin="anonymous"></script>
 
 <!-- 가져오기 -->
-<link rel="stylesheet" href="../../css/top.css">
+<link rel="stylesheet" href="../css/top.css">
 <title>Insert title here</title>
 <!-- 이미지 파일 -->
 <script src="https://kit.fontawesome.com/45fba14eff.js"
@@ -26,7 +26,7 @@
 <link
 	href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap"
 	rel="stylesheet">
-<script src="../../js/top.js" defer></script>
+<script src="../js/top.js" defer></script>
 
 
 </head>
@@ -34,7 +34,29 @@
 	<nav class="navbar_m">
 	<!-- 영역 고정 영역 -->
 		<div class="top_h">
-			<span><a href="#" class="a_m">[회원가입]</a> <a href="#" class="a_m">[로그인]</a></span>
+			<%
+				String user_id = (String) session.getAttribute("user_id");
+				System.out.print(user_id);
+			%>
+			<%if(user_id == null) {%>
+			<!--멀티상점 선택 -->
+			<span>
+			<a href="/login" class="a_m">[로그인]</a>
+			<a href="/joinform" class="a_m">[회원가입]</a>
+			</span>
+			<%
+			} else if (user_id.equals("admin")) {
+			%>
+			<a href="#" onclick="logout()" >로그아웃</a>
+			<a href="./MemberAdminNoticeAction.mo" >관리자 페이지</a>	<!--관리자 페이지 -->
+			<%
+			} else {
+			%>
+			<a href="./Mypage.mo">마이페이지</a>
+			<a href="#" onclick="logout()">로그아웃</a>
+			<%
+				}
+			%>
 		</div>
 	<!-- 영역 고정 끝 -->
 

@@ -30,24 +30,6 @@
                 })
             }
         })
-        /*function abc()
-        {
-            $.ajax({
-                url:"result",
-                type:"get",
-                dataType:"json",
-                success: function (data){
-                    for (var i =0; i<data.length; i++){
-                        $("#boardList").append(data[i].list_title+"<br>")
-                        .append(data[i].list_title+"<br>")
-                        .append(data[i].list_content+"<br>")
-                        .append(data[i].add_file+"<br>")
-                    }
-                }
-            })
-        }*/
-
-
     </script>
 </head>
 <body>
